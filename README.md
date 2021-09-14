@@ -38,10 +38,13 @@ $ docker push andrebarrosog/cerebral-vascular:cerebral-vascular
 
 NOTE: Change the name of the hub user
 COMMAND TO LIST IMAGES
+
 $ docker images
 
 COMMAND TO LIST CONTAINERS
+
 $ docker ps -a
 
 STOP ALL DOCKER IMAGES RUNNING
+
 $ docker system prune
