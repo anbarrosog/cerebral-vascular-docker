@@ -1,24 +1,24 @@
 FROM python:3
 
-#Directori de treball (o Workdir) a la imatge (unix System)
+#Workdir on the image (unix System)
 WORKDIR /usr/src/app
 
-# Diferents llibreries Python a instal·lar
+# Different python libraries to install
 RUN apt-get update #
 RUN apt install -y libgl1-mesa-glx
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-#Copieu tot el que hi ha a la carpeta al directori de treball
+#Copy everything in the folder to the work directory
 COPY . .
 
-#Port de comunicació entre l'aplicació Dash i la host machine
+#Comunication port between the dash application and the host machine
 EXPOSE 8050
 
-#Executeu l'aplicació amb Python
+#Execute with python the application
 CMD ["python", "./app.py"]
 
-#Descomentar per a crear instruccions de construcció per iniciar des del terminal
+#Uncomment this to build instruction to launch from terminal
 
 #docker build . -t "cerebral-vascular"
 
