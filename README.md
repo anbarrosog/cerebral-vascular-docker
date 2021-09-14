@@ -15,14 +15,18 @@ Clone this repository and navigate to the directory containing this `README` in
 a terminal.
 
 LOGIN
+
 $ docker login
+
 $ docker logout
 
 BUILD A LOCAL IMAGE
 Go to the folder of the main project and execute:
+
 $ docker build --tag cerebral-vascular .
 
 RUN DOCKER CONTAINER
+
 $ docker run --publish 8050:8050 cerebral-vascular
 
 NOTE: Important to make sure that the docker application ends the code with the following lines
@@ -34,8 +38,11 @@ if __name__ == "__main__":
 PUSH IMAGE TO HUB (Remote repository)
 
 $ docker logout
+
 $ docker tag cerebral-vascular andrebarrosog/cerebral-vascular:cerebral-vascular
+
 $ docker login
+
 $ docker push andrebarrosog/cerebral-vascular:cerebral-vascular
 
 NOTE: Change the name of the hub user
