@@ -26,7 +26,9 @@ RUN DOCKER CONTAINER
 $ docker run --publish 8050:8050 cerebral-vascular
 
 NOTE: Important to make sure that the docker application ends the code with the following lines
+
 if __name__ == "__main__":
+
   app.run_server(host='0.0.0.0', port=8050, debug=DEBUG)
 
 PUSH IMAGE TO HUB (Remote repository)
